@@ -7,7 +7,7 @@ using MapperUsingExpressionTree.Mapper.MapperHelper;
 namespace MapperUsingExpressionTree.Mapper
 {
     /// <summary>
-    /// 
+    /// Main mapper class for mapping properties.
     /// </summary>
     /// <typeparam name="TEntity"></typeparam>
     public class Mapper<TEntity> where TEntity : class, new()

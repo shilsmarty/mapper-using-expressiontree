@@ -32,7 +32,7 @@ namespace MapperUsingExpressionTree.Mapper.MapperHelper
 
         private static Func<TOut> Creator<TOut>(Type obj)
         {
-            if (obj == typeof (string))
+            if (obj == typeof(string))
                 return Expression.Lambda<Func<TOut>>(Expression.Constant(string.Empty)).Compile();
 
             if (HasDefaultConstructor(obj))

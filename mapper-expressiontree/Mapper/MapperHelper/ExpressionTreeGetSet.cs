@@ -14,7 +14,7 @@ namespace MapperUsingExpressionTree.Mapper.MapperHelper
         private readonly Type _propertyType = null;
         public Func<object, object> GetDelegate;
         public Action<object, object> SetDelegate;
-        private readonly Type _t = typeof (object);
+        private readonly Type _t = typeof(object);
 
         public ExpressionTreeGetSet(PropertyInfo property)
         {
@@ -61,7 +61,7 @@ namespace MapperUsingExpressionTree.Mapper.MapperHelper
                 : Expression.Convert(instance, _declaringType);
             this.GetDelegate =
                 Expression.Lambda<Func<object, object>>(
-                    Expression.TypeAs(Expression.Call(instanceCast, this.Property.GetGetMethod()), _t), instance)
+                        Expression.TypeAs(Expression.Call(instanceCast, this.Property.GetGetMethod()), _t), instance)
                     .Compile();
         }
     }

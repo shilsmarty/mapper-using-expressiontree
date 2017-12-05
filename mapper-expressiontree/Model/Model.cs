@@ -27,7 +27,7 @@ namespace MapperUsingExpressionTree.Model
 
         public List<Benefits> Benefits { get; set; }
 
-        public Dictionary<string,string> PromotionMapping { get; set; }
+        public Dictionary<string, string> PromotionMapping { get; set; }
     }
 
     public class StockAwardsData
@@ -60,7 +60,6 @@ namespace MapperUsingExpressionTree.Model
         public string OfficeNumber { get; set; }
 
         public List<PhoneLocation> PhoneLocationVal { get; set; }
-
     }
 
     public class PhoneLocation
